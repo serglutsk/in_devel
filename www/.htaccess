@@ -1,0 +1,29 @@
+AddDefaultCharset utf8
+Options +FollowSymLinks
+RewriteEngine on
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ (.*)/index\.(php|htm|html)(.*)\ HTTP/
+#RewriteRule ^(.*)index\.(php|htm|html)$ %{REQUEST_URI}?%{QUERY_STRING}
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ (.*)/index\.(php|htm|html)(.*)\ HTTP/
+#RewriteRule ^(.*)/index\.(php|htm|html)$ $1/ [R=301,L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !\.(gif|jpg|png|jpeg|tif|tiff|bmp|js|json|css|pdf|doc|xls|ppt|htm|html|htc|pl|txt)
+#RewriteRule ^(.*)$ /$1 [QSA]
+#RewriteCond %{HTTP_HOST} ^in_devel
+#RewriteRule (.*) http://www.in_devel/$1 [R=301,L]
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+#RewriteRule ^index\.html$ http://in_devel/ [R=301,L]
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+#RewriteRule ^index\.php$ http://in_devel/ [R=301,L]
+#RewriteRule ^index.php\/?$ / [QSA,R]
+#RewriteRule ^/([^/]+)/?$ index.php?c=$1 [L]
+
+# if a directory or a file exists, use it directly
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteCond %{HTTP_HOST} ^in_devel
+#RewriteRule (.*) http://in_devel/$1 [R=301,L]
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+#RewriteRule ^index\.php$ http://in_devel/ [R=301,L]
+#RewriteRule ^product/([^/\.]+)/?$ index.php?c=$1 [L]
