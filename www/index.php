@@ -26,7 +26,7 @@ $w= parse_url($url);
 
 $path=$w['path'];    
 $e=explode('/',$w['query']);
-//var_dump($path);
+
 if(isset($e[1]))$i=$e[1];
 
 if($w['path']=='/index.php' && $w['query']==''){
