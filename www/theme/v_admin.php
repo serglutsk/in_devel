@@ -1,7 +1,7 @@
 <?php
 //вид сорінки адміна
 $masss=$_SESSION['mass'];
-//var_dump($arr);
+
 ?>
 <div id='accordion'>  
     <h3><a href="#">Менеджер новостей</a></h3>
