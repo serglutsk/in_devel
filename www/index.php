@@ -15,8 +15,7 @@ elseif ($_POST['lan_en']) {
     header('Location:'.$_POST['url']);
 }
 if($_POST['log']){
-    //header('Location: index.php?c=login');
-    //$controller= new c_login();
+   
     c_login::tryLogin($_POST);
 }
 
@@ -54,7 +53,7 @@ case "c=logout": $controller= new c_logout();
 case "c=recover": $controller= new c_recover();
 	break;
 default:
-       // $controller = new c_view();
+       
 	$controller = new c_error();
 }
 
